@@ -41,4 +41,28 @@ public class TopicService {
 		topics.add(topic);
 	}
 	
+	//update topic
+	public void updateTopic(Topic topic, String id) {
+		
+		for(int i=0;i<topics.size();i++) {
+			if(topics.get(i).getId().contentEquals(id)){
+				topics.set(i, topic);
+				return;
+			}
+			
+		}
+	}
+	
+	//delete topic
+	public void deleteTopic(String id) {
+		
+		for(int i=0;i<topics.size();i++) {
+			if(topics.get(i).getId().contentEquals(id)){
+				topics.remove(i);
+				return;
+			}
+			
+		}
+	}
+	
 }
